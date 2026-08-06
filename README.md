@@ -140,6 +140,13 @@ eas build --profile development --platform android --local
 ```
 (Ou remova o --local para compilar diretamente na nuvem da Expo. No final, será fornecido um link/QR Code para baixar o APK no celular).
 
+5 .Iniciar o Servidor de Desenvolvimento Metro:Conecta o código JS ao app nativo gerado.
+Após instalar o APK de desenvolvimento no celular, inicie o servidor JavaScript no seu computador executando:
+```Bash
+npx expo start --dev-client
+```
+Abra o aplicativo Astra Dashboard recém-instalado no celular e leia o QR Code exibido no terminal.
+
 # 📱 Utilização
 No seu smartphone Android, acesse as configurações de Bluetooth e pareie manualmente com o dispositivo Astra_Trip_Computer.
 
