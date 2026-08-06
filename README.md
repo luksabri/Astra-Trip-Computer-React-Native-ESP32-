@@ -125,9 +125,19 @@ Se você tem o Android Studio (com SDK e NDK) instalado no computador, pode gera
 npx expo run:android
 ```
 Este comando injeta a pasta /android com as pontes nativas do Bluetooth e faz o deploy direto para o celular conectado.
-4 .Compilar o APK via Nuvem Expo (Opção 2: Sem Android Studio):Requer conta gratuita na Expo.Caso prefira que a Expo compile o aplicativo nos servidores dela (sem precisar instalar o Android Studio no seu PC):Faça login na sua conta Expo:Basheas login
-Execute a compilação gerando um arquivo .apk:Basheas build --profile development --platform android --local
+4 .Compilar o APK via Nuvem Expo (Opção 2: Sem Android Studio):
+Requer conta gratuita na Expo.
+Caso prefira que a Expo compile o aplicativo nos servidores dela (sem precisar instalar o Android Studio no seu PC):
+Faça login na sua conta Expo:
+```Bash
+eas login
+```
+Execute a compilação gerando um arquivo .apk:
+```Bash
+eas build --profile development --platform android --local
+```
 (Ou remova o --local para compilar diretamente na nuvem da Expo. No final, será fornecido um link/QR Code para baixar o APK no celular).
+
 # 📱 Utilização
 No seu smartphone Android, acesse as configurações de Bluetooth e pareie manualmente com o dispositivo Astra_Trip_Computer.
 
