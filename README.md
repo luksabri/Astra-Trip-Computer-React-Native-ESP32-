@@ -105,21 +105,19 @@ Node.js (v18+)
 
 Android Studio configurado com SDK e NDK (para compilação local).
 
-Passos de Instalação:
+# Passos de Instalação:
+Para rodar essa aplicação no seu dispositivo Android ou em um emulador, o caminho ideal é gerar um Development Build (Build de Desenvolvimento) do Expo.
+Isso é necessário porque a biblioteca react-native-bluetooth-classic utiliza código nativo do Android para gerenciar a antena Bluetooth e a porta serial (SPP), algo que o aplicativo Expo Go tradicional não consegue executar sozinho.
+Abaixo está o passo a passo completo utilizando a ferramenta EAS (Expo Application Services) em modo local.
+1 .Instalar o EAS CLI:Ferramenta de compilação da Expo.Abra o terminal na pasta do projeto e instale o EAS CLI globalmente no Node.js:
 ```Bash
-# 1. Clone o repositório
-git clone [https://github.com/SEU_USUARIO/astra-trip-computer.git](https://github.com/SEU_USUARIO/astra-trip-computer.git)
-cd astra-trip-computer
-
-# 2. Instale as dependências
-npm install
-
-# 3. Compile e instale a versão de desenvolvimento no dispositivo Android via USB
-npx expo run:android
-
-# 4. Inicie o servidor JavaScript Metro
-npx expo start --dev-client
+npm install -g eas-cli
 ```
+2.Configurar o projeto para Builds Nativos:Gera o arquivo eas.json.Inicialize a configuração do EAS executando o comando abaixo. Ele criará o arquivo eas.json no diretório raiz do projeto:Basheas build:configure
+3.Compilar o APK de Desenvolvimento (Opção 1: Compilação Local):Requer Android Studio e Java configurados na máquina.Se você tem o Android Studio (com SDK e NDK) instalado no computador, pode gerar o app e instalá-lo diretamente no celular via cabo USB:Bashnpx expo run:android
+Este comando injeta a pasta /android com as pontes nativas do Bluetooth e faz o deploy direto para o celular conectado.4.Compilar o APK via Nuvem Expo (Opção 2: Sem Android Studio):Requer conta gratuita na Expo.Caso prefira que a Expo compile o aplicativo nos servidores dela (sem precisar instalar o Android Studio no seu PC):Faça login na sua conta Expo:Basheas login
+Execute a compilação gerando um arquivo .apk:Basheas build --profile development --platform android --local
+(Ou remova o --local para compilar diretamente na nuvem da Expo. No final, será fornecido um link/QR Code para baixar o APK no celular).
 # 📱 Utilização
 No seu smartphone Android, acesse as configurações de Bluetooth e pareie manualmente com o dispositivo Astra_Trip_Computer.
 
