@@ -131,7 +131,7 @@ Toque no botão 🔌 CONECTAR BLUETOOTH DO VEÍCULO localizado no rodapé do app
 
 ⚙️ Parâmetros de Calibração (Firmware)
 Se você estiver aplicando este projeto em outro veículo com especificações diferentes, ajuste as seguintes constantes no arquivo C++ do ESP32:
-
+```BASH 
 C++
 const int NUMERO_BICOS = 4;             // Número de cilindros/bicos
 const float VAZAO_BICO_ML_MS = 0.0035;  // Vazão individual (mL/ms)
@@ -139,3 +139,4 @@ const float PULSOS_VSS_POR_METRO = 8.0; // Razão de pulsos/metro do VSS
 const float CAPACIDADE_TANQUE_LITROS = 57.0; // Capacidade máxima do tanque
 📄 Licença
 Este projeto é distribuído sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+```
