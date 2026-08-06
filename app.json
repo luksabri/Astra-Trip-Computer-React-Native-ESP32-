@@ -25,8 +25,11 @@
       ],
       "package": "com.luksabri.AstraDashboard"
     },
-    "plugins": [
-      
-    ]
+    "plugins": [],
+    "extra": {
+      "eas": {
+        "projectId": "e3863de4-79f1-411f-81cb-eef1b3d922b5"
+      }
+    }
   }
 }
