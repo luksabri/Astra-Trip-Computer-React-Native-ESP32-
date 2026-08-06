@@ -107,8 +107,9 @@ Android Studio configurado com SDK e NDK (para compilação local).
 
 # Passos de Instalação:
 Para rodar essa aplicação no seu dispositivo Android ou em um emulador, o caminho ideal é gerar um Development Build (Build de Desenvolvimento) do Expo.
-Isso é necessário porque a biblioteca react-native-bluetooth-classic utiliza código nativo do Android para gerenciar a antena Bluetooth e a porta serial (SPP), algo que o aplicativo Expo Go tradicional não consegue executar sozinho.
+Isso é necessário porque a biblioteca *react-native-bluetooth-classic* utiliza código nativo do Android para gerenciar a antena Bluetooth e a porta serial (SPP), algo que o aplicativo Expo Go tradicional não consegue executar sozinho.
 Abaixo está o passo a passo completo utilizando a ferramenta EAS (Expo Application Services) em modo local.
+
 1 .Instalar o EAS CLI:Ferramenta de compilação da Expo.Abra o terminal na pasta do projeto e instale o EAS CLI globalmente no Node.js:
 ```Bash
 npm install -g eas-cli
